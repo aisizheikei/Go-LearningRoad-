@@ -34,4 +34,16 @@ func main() {
 	fmt.Println(now.Sub(timeTemp))
 	fmt.Println("----------------------------------------------")
 
+	// 根据时区解析时间
+	loc, err := time.LoadLocation("")
+	if err != nil {
+		fmt.Println("load loc failed ,err:", err)
+	}
+	timeTemp_loc, err := time.ParseInLocation("2006/01/02 15:04:05", "2021/05/22 18:39:00", loc)
+	if err != nil {
+		fmt.Println("time parase failed. err:", err)
+	}
+	fmt.Println("时区：", loc, ";时间：", timeTemp_loc)
+	fmt.Println("----------------------------------------------")
+
 }
