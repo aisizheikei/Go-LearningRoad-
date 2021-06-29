@@ -14,7 +14,7 @@ func main() {
 		go f1(i)
 	}
 	//main函数不知道线程是否都已经结束。所以用wg记录
-	wg.Wait()
+	wg.Wait() //计数器减为0就结束了
 }
 
 func f1(i int) {
