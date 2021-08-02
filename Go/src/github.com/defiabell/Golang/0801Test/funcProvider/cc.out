@@ -1,0 +1,4 @@
+mode: set
+github.com/defiabell/Golang/0801Test/funcProvider/numberHandler.go:7.24,8.12 1 1
+github.com/defiabell/Golang/0801Test/funcProvider/numberHandler.go:11.2,11.14 1 1
+github.com/defiabell/Golang/0801Test/funcProvider/numberHandler.go:8.12,10.3 1 0

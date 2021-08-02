@@ -20,6 +20,7 @@ func main() {
 			fmt.Println("accept failed, err:", err)
 			return
 		}
+		defer conn.Close()
 		//3、与客户端通信
 		go processConn(conn)
 	}
@@ -33,6 +34,6 @@ func processConn(conn net.Conn) {
 			fmt.Println("read from conn failed,err:", err)
 			return
 		}
-		fmt.Println(string(tmp[:n]))
+		fmt.Println("收到消息：", string(tmp[:n]))
 	}
 }
