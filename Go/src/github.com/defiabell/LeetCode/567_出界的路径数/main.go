@@ -6,8 +6,8 @@ https://leetcode-cn.com/problems/out-of-boundary-paths/
 */
 package main
 
-//递归求解，动态规划。
 /*
+动态规划
 维护一个二维数组，保存i,j节点的出界路径数量
 
 */

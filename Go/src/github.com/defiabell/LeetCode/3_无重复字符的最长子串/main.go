@@ -35,8 +35,10 @@ func lengthOfLongestSubstring(s string) int {
 	maxLengthOfSub := 0
 	var subMap = make(map[rune]int)
 	for subIndex, subVal := range s {
-		if _, ok := subMap[subVal]; ok {
-
+		if oldIndex, ok := subMap[subVal]; ok {
+			
+			subMap[subVal] = subIndex
+			maxLengthOfSub++ = 
 		} else {
 			subMap[subVal] = subIndex
 			maxLengthOfSub++
